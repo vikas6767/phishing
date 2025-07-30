@@ -1,0 +1,227 @@
+.email-analysis-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.email-content-analysis {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.analysis-title {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.analysis-description {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.analysis-form {
+  margin-bottom: 30px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.form-control::placeholder {
+  color: var(--text-tertiary);
+}
+
+textarea.form-control {
+  min-height: 200px;
+  resize: vertical;
+  border: 1px solid var(--border-color);
+  background-color: var(--input-bg);
+}
+
+/* Add purple border to match the image */
+#body {
+  border: 1px solid #6366f1;
+  border-radius: 6px;
+}
+
+.analyze-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #4f46e5;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.analyze-button:hover {
+  background-color: #4338ca;
+}
+
+.analyze-button:disabled {
+  background-color: #6b7280;
+  cursor: not-allowed;
+}
+
+/* Keep existing styles for results display */
+.badge {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.risk-badge {
+  font-size: 1.2rem !important;
+  padding: 10px 15px !important;
+}
+
+.score-badge {
+  font-size: 1rem !important;
+  padding: 8px 12px !important;
+}
+
+.tactic-badge {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.email-auth-card .auth-indicator {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background-color: var(--card-bg);
+  margin: 0 0.5rem;
+}
+
+.analysis-tabs .nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+}
+
+.analysis-tabs .nav-link.active {
+  color: #6366f1;
+  font-weight: 600;
+  border-bottom: 3px solid #6366f1;
+  background-color: transparent;
+}
+
+.result-summary-card {
+  background-color: var(--card-bg);
+  border-left: 5px solid #6366f1;
+}
+
+.table th {
+  background-color: var(--card-header-bg);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.table td {
+  color: var(--text-color);
+}
+
+.url-cell {
+  word-break: break-all;
+  max-width: 300px;
+}
+
+.analysis-results {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  background-color: var(--card-bg);
+}
+
+.card-header {
+  background-color: var(--card-header-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.progress {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  height: 2rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+  border-radius: 1rem;
+  transition: width 0.6s ease;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark mode compatibility - the variables are defined in the global CSS */
+:root[data-theme="dark"] .form-control {
+  background-color: #1e293b;
+  border-color: #2d3748;
+  color: #e2e8f0;
+}
+
+:root[data-theme="dark"] .form-control::placeholder {
+  color: #94a3b8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table th, .table td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .card-header h5 {
+    font-size: 1.1rem;
+  }
+  
+  .email-auth-card .auth-indicator {
+    padding: 0.3rem 0.5rem;
+    margin: 0 0.2rem;
+  }
+} 

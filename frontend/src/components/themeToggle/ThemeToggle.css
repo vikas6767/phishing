@@ -1,0 +1,39 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--text-color);
+  transition: background-color 0.2s;
+}
+
+.toggle-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.toggle-button svg {
+  transition: transform 0.3s ease;
+}
+
+.toggle-button:hover svg {
+  transform: rotate(15deg);
+}
+
+/* Different styles based on theme */
+:root[data-theme="dark"] .toggle-button {
+  color: #ffffff;
+}
+
+:root[data-theme="light"] .toggle-button {
+  color: #333333;
+} 

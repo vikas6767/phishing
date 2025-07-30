@@ -1,0 +1,335 @@
+.dashboard-container {
+  background-color: var(--background-dark);
+  min-height: calc(100vh - 70px);
+  padding: 20px 0;
+}
+
+.dashboard-title {
+  color: var(--text-color);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Card styling */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  background-color: var(--card-header-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+}
+
+.card-title {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Threat level cards */
+.threat-card {
+  height: 100%;
+}
+
+.threat-meter {
+  text-align: center;
+}
+
+.threat-level {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.threat-count {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.count-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.success-text {
+  color: #2ea043 !important;
+}
+
+.count-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Table styling */
+.attack-table {
+  color: var(--text-color);
+  border-color: var(--border-color);
+  background-color: var(--card-bg);
+}
+
+.attack-table thead {
+  background-color: var(--card-header-bg);
+}
+
+.attack-table th {
+  border-color: var(--border-color);
+  color: var(--text-color) !important;
+  font-weight: 600;
+  background-color: #1a1f2b;
+}
+
+.attack-table td {
+  border-color: var(--border-color);
+  vertical-align: middle;
+  color: var(--text-color) !important;
+  background-color: var(--card-bg);
+}
+
+.table-danger-subtle {
+  background-color: rgba(244, 63, 94, 0.15) !important;
+}
+
+.table-danger-subtle td {
+  background-color: rgba(244, 63, 94, 0.15) !important;
+}
+
+/* Cyber attacks card styling */
+.attacks-card {
+  border: 1px solid #30363d;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.attacks-card .card-header {
+  background-color: rgba(61, 65, 76, 0.9);
+  border-bottom: 1px solid #30363d;
+  padding: 1rem 1.25rem;
+}
+
+.attacks-card .attack-table th {
+  border-bottom-width: 2px;
+}
+
+.attacks-card .attack-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.attacks-card .attack-table tr.table-danger-subtle:hover {
+  background-color: rgba(244, 63, 94, 0.2) !important;
+}
+
+.attacks-card h4 {
+  color: darkmagenta;
+}
+
+/* Attack distribution styling */
+.attack-distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 0.5rem;
+}
+
+.distribution-item {
+  margin-bottom: 0.5rem;
+}
+
+.attack-type {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.attack-value {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Prevention measures */
+.prevention-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.prevention-item {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.prevention-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.prevention-threat {
+  color: var(--text-color);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.prevention-measure {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Progress bar styling */
+.progress {
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Badge styling */
+.badge {
+  font-weight: 500;
+  font-size: 0.75rem;
+  padding: 0.35em 0.65em;
+}
+
+/* Pulsing live badge */
+.pulse-badge {
+  animation: pulse 2s infinite;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+}
+
+/* Phishing prevention tips */
+.phishing-prevention-card {
+  background-color: var(--card-bg);
+}
+
+.phishing-prevention-title {
+  color: #4f46e5;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phishing-tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.phishing-tip-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.phishing-tip-icon {
+  color: #4f46e5;
+  font-size: 1.25rem;
+  margin-top: 2px;
+}
+
+.phishing-tip-text {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(244, 63, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(244, 63, 94, 0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .chart-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 1.5rem;
+  }
+  
+  .threat-level, .count-value {
+    font-size: 2rem;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
+/* Scan History Styling */
+.scan-history-card {
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.scan-history-card .card-header {
+  background-color: rgba(61, 65, 76, 0.9);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.scan-history-table {
+  color: var(--text-color);
+  border-color: var(--border-color);
+  background-color: var(--card-bg);
+}
+
+.scan-history-table thead {
+  background-color: var(--card-header-bg);
+}
+
+.scan-history-table th {
+  border-color: var(--border-color);
+  color: var(--text-color) !important;
+  font-weight: 600;
+  background-color: #1a1f2b;
+}
+
+.scan-history-table td {
+  border-color: var(--border-color);
+  vertical-align: middle;
+  color: var(--text-color) !important;
+  background-color: var(--card-bg);
+}
+
+.scan-history-card .card-footer {
+  background-color: rgba(30, 33, 43, 0.8);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.scan-history-card h4 {
+  color: #4f46e5;
+}
+
+.scan-history-card button i {
+  margin-right: 4px;
+}
+
+.scan-history-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.scan-history-card .table-danger-subtle:hover {
+  background-color: rgba(244, 63, 94, 0.2) !important;
+} 
